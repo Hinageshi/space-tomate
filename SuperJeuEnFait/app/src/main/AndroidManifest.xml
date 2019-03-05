@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".SpaceshipViewActivity"></activity>
+        <activity android:name=".TomatoActivity"></activity>
+        <activity android:name=".EggplantActivity"></activity>
+        <activity android:name=".PumpkinActivity"></activity>
+        <activity android:name=".BroccoliActivity"></activity>
+        <activity android:name=".SpaceshipViewActivity" />
         <activity
             android:name=".MapActivity"
             android:screenOrientation="portrait">

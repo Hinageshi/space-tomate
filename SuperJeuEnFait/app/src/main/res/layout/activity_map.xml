@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        android:background="@drawable/space_background"/>
+        android:background="@drawable/space_background_2"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,6 +130,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonSpaceship"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"

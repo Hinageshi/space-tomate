@@ -1,6 +1,7 @@
 package com.example.superjeuenfait;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.ImageButton;
 public class MapActivity extends AppCompatActivity {
 
     private ImageButton exitButton;
+    private ImageButton imageButtonSpaceship;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,13 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showAlertExit();
+            }
+        });
+        imageButtonSpaceship = findViewById(R.id.imageButtonSpaceship);
+        imageButtonSpaceship.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeActivity(SpaceshipViewActivity.class);
             }
         });
     }
@@ -47,5 +56,11 @@ public class MapActivity extends AppCompatActivity {
             }
         });
         alertDialog.show();
+    }
+
+    public void changeActivity(Class newActivity){
+        Intent intent = new Intent(this, newActivity);
+        startActivity(intent);
+        finish();
     }
 }

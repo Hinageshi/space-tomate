@@ -5,4 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
     <color name="sunflower">#f9d818</color>
+    <color name="tomato">#e60000</color>
+    <color name="pumpkin">#ff6600</color>
+    <color name="eggplant">#660066</color>
+    <color name="broccoli">#009900</color>
 </resources>
