@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.superjeuenfait">
+    package="com.example.spacetomate">
 
     <application
         android:allowBackup="true"
@@ -13,6 +13,7 @@
         <activity android:name=".EggplantActivity"></activity>
         <activity android:name=".PumpkinActivity"></activity>
         <activity android:name=".BroccoliActivity"></activity>
+        <activity android:name=".EarthViewActivity"></activity>
         <activity android:name=".SpaceshipViewActivity" />
         <activity
             android:name=".MapActivity"
@@ -23,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
