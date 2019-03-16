@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SuperJeuEnFait</string>
+    <string name="SellButton">Vendre</string>
 </resources>

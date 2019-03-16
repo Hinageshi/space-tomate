@@ -50,6 +50,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonTomatoPlanet"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"
@@ -64,6 +65,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonEggplantPlanet"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"
@@ -90,6 +92,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonPumpkinPlanet"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"
@@ -104,6 +107,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonBroccoliPlanet"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"
@@ -131,13 +135,13 @@
 
             <ImageButton
                 android:id="@+id/imageButtonSpaceship"
-                android:layout_width="125dp"
+                android:layout_width="150dp"
                 android:layout_height="125dp"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:background="@null"
-                android:src="@drawable/spaceship"/>
+                android:src="@drawable/spaceship_lying"/>
 
             <View
                 android:layout_width="0dp"
@@ -157,6 +161,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
+                android:id="@+id/imageButtonEarth"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"

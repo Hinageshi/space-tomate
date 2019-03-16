@@ -9,4 +9,6 @@
     <color name="pumpkin">#ff6600</color>
     <color name="eggplant">#660066</color>
     <color name="broccoli">#009900</color>
+    <color name="Market">#80c0c0c0</color>
+    <color name="ButtonSell">#80FFFFFF</color>
 </resources>

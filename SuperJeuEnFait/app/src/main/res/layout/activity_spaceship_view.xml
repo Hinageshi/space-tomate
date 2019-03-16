@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
@@ -8,94 +7,199 @@
     tools:context=".MapActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/space_background_2"/>
+        android:background="@drawable/space_background_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="80dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginVertical="75dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:background="@drawable/spaceship"/>
+        android:id="@+id/testAddProduct"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:background="@null"
+        android:src="@color/sunflower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageButton
+        android:id="@+id/testReset"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@color/ButtonSell"
+        android:background="@null"/>
+
+    <ImageButton
+        android:id="@+id/testAddTomato"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="1100dp"
+        android:background="@color/tomato"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <ImageButton
+        android:id="@+id/testAddEggplant"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="400dp"
+        android:background="@color/eggplant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/testAddPumpkin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="250dp"
+        android:background="@color/pumpkin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/testAddBroccoli"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="100dp"
+        android:background="@color/broccoli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/testMoneyCounter"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/sunflower"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="80dp"
         android:orientation="vertical"
-
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginVertical="75dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
-
-           <ImageButton
-                android:id="@+id/imageButtonTomato"
-                android:layout_width="125dp"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/tomato"
-                android:padding="5dp"
-                android:background="@color/sunflower" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/imageButtonEggplant"
-                android:layout_width="125dp"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/eggplant"
-                android:padding="5dp"
-                android:background="@color/sunflower" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/imageButtonTomato"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:adjustViewBounds="true"
+            android:background="@color/sunflower"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tomato"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonPumpkin"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonEggplant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        </ImageButton>
 
-            <ImageButton
-                android:id="@+id/imageButtonPumpkin"
-                android:layout_width="125dp"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/pumpkin"
-                android:padding="5dp"
-                android:background="@color/sunflower" />
+        <ImageButton
+            android:id="@+id/imageButtonEggplant"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/sunflower"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/eggplant"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonBroccoli"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonTomato"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+        </ImageButton>
 
-            <ImageButton
-                android:id="@+id/imageButtonBroccoli"
-                android:layout_width="125dp"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/broccoli"
-                android:padding="5dp"
-                android:background="@color/sunflower" />
+        <ImageButton
+            android:id="@+id/imageButtonPumpkin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/sunflower"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pumpkin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonBroccoli"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonTomato">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/imageButtonBroccoli"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:background="@color/sunflower"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/broccoli"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonPumpkin"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonEggplant">
+
+        </ImageButton>
 
 
-        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
-    </LinearLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
