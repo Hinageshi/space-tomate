@@ -45,7 +45,7 @@ public class Garden {
         return (slotAvailable(i) && shootPerSlot[i]<Game.shootPerSlotMax);
     }
 
-    public void increseLevelSlot(int i){
+    public void increaseLevelSlot(int i){
         if(levelCanBeIncreased(i)){
             slotLevel[i]++;
         }
@@ -61,6 +61,10 @@ public class Garden {
         slotLevel[i]=1;
         shootPerSlot[i]=1;
         slotUnlocked++;
+    }
+
+    public int getNextSlotToUnlock(){
+        return slotUnlocked;
     }
 
     public void unlockNextSlot(){

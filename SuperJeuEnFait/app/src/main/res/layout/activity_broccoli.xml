@@ -62,7 +62,7 @@
             android:layout_marginBottom="25dp">
 
             <ImageButton
-                android:id="@+id/tomatoBox1"
+                android:id="@+id/broccoliBox1"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -71,10 +71,35 @@
                 android:layout_row="0"
                 android:layout_column="0"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox1NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox1NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox2"
+                android:id="@+id/broccoliBox2"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -83,10 +108,35 @@
                 android:layout_row="0"
                 android:layout_column="1"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox2NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox2NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox3"
+                android:id="@+id/broccoliBox3"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -95,10 +145,35 @@
                 android:layout_row="0"
                 android:layout_column="2"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox3NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox3NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox4"
+                android:id="@+id/broccoliBox4"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -107,10 +182,35 @@
                 android:layout_row="1"
                 android:layout_column="0"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox4NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox4NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox5"
+                android:id="@+id/broccoliBox5"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -119,10 +219,35 @@
                 android:layout_row="1"
                 android:layout_column="1"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox5NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox5NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox6"
+                android:id="@+id/broccoliBox6"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -131,10 +256,35 @@
                 android:layout_row="1"
                 android:layout_column="2"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox6NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox6NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox7"
+                android:id="@+id/broccoliBox7"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -143,10 +293,35 @@
                 android:layout_row="2"
                 android:layout_column="0"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox7NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox7NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox8"
+                android:id="@+id/broccoliBox8"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -155,10 +330,35 @@
                 android:layout_row="2"
                 android:layout_column="1"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox8NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox8NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:visibility="invisible"/>
 
             <ImageButton
-                android:id="@+id/tomatoBox9"
+                android:id="@+id/broccoliBox9"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:padding="20dp"
@@ -167,7 +367,32 @@
                 android:layout_row="2"
                 android:layout_column="2"
                 android:src="@drawable/harvest"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/broccoliBox9NbToCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id ="@+id/broccoliBox9NbShoots"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="1"
+                android:textSize="9dp"
+                android:padding="15dp"
+                android:background="@drawable/button_bg_round"
+                android:layout_gravity="bottom"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:visibility="invisible"/>
         </GridLayout>
 
         <Button

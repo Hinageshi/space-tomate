@@ -37,6 +37,10 @@ public class Player {
         return money;
     }
 
+    public void setMoney(int money){
+        this.money = money;
+    }
+
     public SalesHistory getPlayerSalesHistory() {
         return playerSalesHistory;
     }

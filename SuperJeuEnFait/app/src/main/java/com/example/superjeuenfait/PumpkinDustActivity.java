@@ -19,4 +19,9 @@ public class PumpkinDustActivity extends DustActivity {
     public void onBackPressed(){
         super.onBackPressed();
     }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+    }
 }

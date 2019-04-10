@@ -19,4 +19,9 @@ public class TomatoDustActivity extends DustActivity {
     public void onBackPressed(){
         super.onBackPressed();
     }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+    }
 }

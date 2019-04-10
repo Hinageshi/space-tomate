@@ -268,19 +268,19 @@ public class Game {
         if(indice>=0 && indice<shootPerSlotMax) {
             switch (p) {
                 case TOMATO:
-                    player.getSpaceship().getTomatoGarden().increseLevelSlot(indice);
+                    player.getSpaceship().getTomatoGarden().increaseLevelSlot(indice);
                     break;
                 case EGGPLANT:
                     if (unlockedProducts > 1)
-                        player.getSpaceship().getEggplantGarden().increseLevelSlot(indice);
+                        player.getSpaceship().getEggplantGarden().increaseLevelSlot(indice);
                     break;
                 case PUMPKIN:
                     if (unlockedProducts > 2)
-                        player.getSpaceship().getPumpkinGarden().increseLevelSlot(indice);
+                        player.getSpaceship().getPumpkinGarden().increaseLevelSlot(indice);
                     break;
                 case BROCCOLI:
                     if (unlockedProducts > 3)
-                        player.getSpaceship().getBroccoliGarden().increseLevelSlot(indice);
+                        player.getSpaceship().getBroccoliGarden().increaseLevelSlot(indice);
                     break;
                 default:
                     break;

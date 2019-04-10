@@ -58,6 +58,7 @@ public class PumpkinActivity extends AppCompatActivity {
 
     public void changeActivity(Class newActivity){
         Intent intent = new Intent(this, newActivity);
+        saveData(game);
         startActivity(intent);
         finish();
     }

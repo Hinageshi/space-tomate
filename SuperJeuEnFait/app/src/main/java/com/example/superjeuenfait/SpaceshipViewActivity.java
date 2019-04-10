@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -16,13 +17,13 @@ public class SpaceshipViewActivity extends AppCompatActivity {
     private ImageButton imageButtonEggplant;
     private ImageButton imageButtonPumpkin;
     private ImageButton imageButtonBroccoli;
+    private ImageButton imageButtonChest;
     private ImageButton testReset;
     private ImageButton testUnlock;
     private ImageButton testT;
     private ImageButton testE;
     private ImageButton testP;
     private ImageButton testB;
-    private TextView testMoney;
     private Game game;
     private SharedPreferences sharedPreferences;
 
@@ -41,6 +42,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.unlockNewProduct();
+                showToast("testUnlock applied");
             }
         });
         testReset= findViewById(R.id.testReset);
@@ -49,6 +51,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             public void onClick(View view) {
                 game=new Game("Joueur");
                 saveData(game);
+                showToast("testReset applied");
             }
         });
         testT= findViewById(R.id.testAddTomato);
@@ -56,6 +59,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.getPlayer().addProductStock(Products.TOMATO,50);
+                showToast("testT applied");
             }
         });
         testE= findViewById(R.id.testAddEggplant);
@@ -63,6 +67,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.getPlayer().addProductStock(Products.EGGPLANT,50);
+                showToast("testE applied");
             }
         });
         testP= findViewById(R.id.testAddPumpkin);
@@ -70,6 +75,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.getPlayer().addProductStock(Products.PUMPKIN,50);
+                showToast("testP applied");
             }
         });
         testB= findViewById(R.id.testAddBroccoli);
@@ -77,10 +83,9 @@ public class SpaceshipViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 game.getPlayer().addProductStock(Products.BROCCOLI,50);
+                showToast("testB applied");
             }
         });
-        testMoney=findViewById(R.id.testMoneyCounter);
-        testMoney.setText("Money: "+game.getPlayer().getMoney());
 
         imageButtonTomato = findViewById(R.id.imageButtonTomato);
         imageButtonTomato.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +115,14 @@ public class SpaceshipViewActivity extends AppCompatActivity {
                 changeActivity(BroccoliActivity.class);
             }
         });
+
+        imageButtonChest = findViewById(R.id.imageButtonChest);
+        imageButtonChest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeActivity(InventoryActivity.class);
+            }
+        });
     }
 
     @Override
@@ -126,6 +139,7 @@ public class SpaceshipViewActivity extends AppCompatActivity {
 
     public void changeActivity(Class newActivity){
         Intent intent = new Intent(this, newActivity);
+        saveData(game);
         startActivity(intent);
         finish();
     }
@@ -134,5 +148,10 @@ public class SpaceshipViewActivity extends AppCompatActivity {
     protected void onDestroy() {
         saveData(game);
         super.onDestroy();
+    }
+
+    public void showToast(String msg){
+        Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
+        toast.show();
     }
 }

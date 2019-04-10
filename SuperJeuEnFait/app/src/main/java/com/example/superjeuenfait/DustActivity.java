@@ -1,6 +1,7 @@
 package com.example.superjeuenfait;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.superjeuenfait.MapActivity;
 import com.example.superjeuenfait.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -34,11 +36,19 @@ public abstract class DustActivity extends AppCompatActivity {
     static int minX, maxX, minY, maxY;
     private int imageId;
     ArrayList<ImageView> images = new ArrayList<>();
+    private Game game;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dust);
+
+        sharedPreferences=getBaseContext().getSharedPreferences("GAME",MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json= sharedPreferences.getString("GAME_DATA",null);
+        game=gson.fromJson(json,Game.class);
+
         linearLayout = findViewById(R.id.linearLayout);
         mainView = findViewById(R.id.mainView);
         imageViewVegetable = findViewById(R.id.imageViewVegetable);
@@ -84,6 +94,12 @@ public abstract class DustActivity extends AppCompatActivity {
             }
 
             public void onFinish(){
+                switch(imageId){
+                    case R.drawable.tomato: game.getPlayer().addDustStock(Products.TOMATO, Integer.valueOf(textViewDustNumber.getText().toString())); break;
+                    case R.drawable.eggplant: game.getPlayer().addDustStock(Products.EGGPLANT, Integer.valueOf(textViewDustNumber.getText().toString())); break;
+                    case R.drawable.pumpkin: game.getPlayer().addDustStock(Products.PUMPKIN, Integer.valueOf(textViewDustNumber.getText().toString())); break;
+                    case R.drawable.broccoli: game.getPlayer().addDustStock(Products.BROCCOLI, Integer.valueOf(textViewDustNumber.getText().toString())); break;
+                }
                 changeActivity(MapActivity.class);
                 finish();
             }
@@ -145,8 +161,16 @@ public abstract class DustActivity extends AppCompatActivity {
         changeActivity(MapActivity.class);
     }
 
+    public void saveData(Game game){
+        Gson gson = new Gson();
+        sharedPreferences.edit()
+                .putString("GAME_DATA",gson.toJson(game))
+                .apply();
+    }
+
     public void changeActivity(Class newActivity){
         Intent intent = new Intent(this, newActivity);
+        saveData(game);
         startActivity(intent);
         finish();
     }
@@ -159,5 +183,11 @@ public abstract class DustActivity extends AppCompatActivity {
         int nbPoints = Integer.parseInt(textViewDustNumber.getText().toString());
         nbPoints++;
         textViewDustNumber.setText(String.valueOf(nbPoints));
+    }
+
+    @Override
+    protected void onDestroy() {
+        saveData(game);
+        super.onDestroy();
     }
 }
